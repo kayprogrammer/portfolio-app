@@ -26,7 +26,7 @@ SECRET_KEY = '0fp)&9=9m8d#tkj5(2no8=tux0+1i5#19wvxf+zk%)tajjw7yd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
   
-ALLOWED_HOSTS = ['kayprogrammer.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['kayprogrammer.herokuapp.com', 'www.kayprogrammer.herokuapp.com', 'localhost']
 
 SWEETIFY_SWEETALERT_LIBRARY = 'sweetalert2'
 
