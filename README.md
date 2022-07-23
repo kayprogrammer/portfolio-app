@@ -1,4 +1,4 @@
-# Kayprogrammer 
+# Mini Portfolio App 
 
 This is a simple portfolio website built with HTML5, CSS3 and Django. 
 Note that this is not my original portfolio website.
