@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '0fp)&9=9m8d#tkj5(2no8=tux0+1i5#19wvxf+zk%)tajjw7yd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
   
-ALLOWED_HOSTS = ['kayprogrammer.herokuapp.com', 'www.kayprogrammer.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = []
 
 SWEETIFY_SWEETALERT_LIBRARY = 'sweetalert2'
 
@@ -119,15 +119,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-if os.getcwd() == '/app':
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    SECURE_SSL_REDIRECT = TRUE
-    DEBUG = FALSE
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static/'),]
