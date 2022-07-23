@@ -1,11 +1,12 @@
 # Mini Portfolio App 
 
 This is a simple portfolio website built with HTML5, CSS3 and Django. 
-Note that this is not my original portfolio website.
 
-![alt text](https://github.com/kayprogrammer/portfolio-app/blob/master/display.png?raw=true)
+Note that this is not my original portfolio website. I'm just updating an old ReadMe. 
 
-This frontend design was originally made by [Traversy Media](http://localhost:8000)
+![alt text](https://github.com/kayprogrammer/portfolio-app/blob/main/display.png?raw=true)
+
+This frontend design was originally made by [Traversy Media](https://www.youtube.com/c/TraversyMedia)
 ### How to Test Locally...
 
 * Download this repository
