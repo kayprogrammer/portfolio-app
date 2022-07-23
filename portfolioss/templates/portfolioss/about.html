@@ -1,0 +1,35 @@
+{% extends 'portfolioss/index.html' %}
+{% load static %}
+
+{% block content %}
+<section id="newsletter">
+    <div class="container">
+        <h1>Suscribe to Our Newsletter</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.email}}
+            <button style="cursor: pointer;" type="submit" class="button_1">Suscribe</button>
+            <div style="color: orange; font-size: 13px;">{{form.email.errors|striptags}}</div>
+        </form>
+
+    </div>
+</section>
+<section id="main">
+    <div class="container">
+        <article id="main-col">
+            <h1 class="page-title">About Us</h1>
+            <p>This isn't actually my official portfolio website. It was made with HTML, CSS, Python/Django for fun sake (pretty easy). Well, the Html and css part is from a tutorial I followed a long time ago (by Traversy Media). Few things were changed and added. The backend was my main work (not a big deal actually). I'm a full stack web developer, the forms on this site are working pretty well, so all your messages will be replied. Now check out the dummy text below</p>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur </p>
+        </article>
+
+        <aside id="sidebar">
+            <div class="dark">
+                <h3>What We Do</h3>
+                <p>Here's another dummy text, but my details below are correct.<br> Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+                <p>Email: kayprogrammer2@gmail.com</p>
+                <a style="color: white;" href="https://wa.me/2348095602320">Whatsapp Dm...</a>
+            </div>
+        </aside>
+    </div>
+</section>
+{% endblock %}

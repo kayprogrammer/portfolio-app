@@ -1,0 +1,43 @@
+{% extends 'portfolioss/index.html' %}
+{% load static %}
+
+{% block content %}
+<section id="showcase">
+    <div class="container">
+        <h1>Affordable Web Development</h1>
+        <p>We offer great and responsive websites at affordable prices.</p>
+        <p>Your satisfaction is our priority</p>
+    </div>
+</section>
+<section id="newsletter">
+    <div class="container">
+        <h1>Suscribe to Our Newsletter</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.email}}
+            <button style="cursor: pointer;" type="submit" class="button_1">Suscribe</button>
+            <div style="color: orange; font-size: 13px;">{{form.email.errors|striptags}}</div>
+        </form>
+
+    </div>
+</section>
+<section id="boxes">
+    <div class="container">
+        <div class="box">
+            <img style="height: 103px; width: 130px;" src="{% static 'img/ht.jpg' %}">
+            <h3>Front-end Development</h3>
+            <p>We offer very cool and responsive designs.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi .</p>
+        </div>
+        <div class="box">
+            <img style="height: 6.5em;" src="{% static 'img/djg.jpg' %}">
+            <h3>Back-end Development</h3>
+            <p>We offer great server-side programming.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="box">
+            <img src="{% static 'img/webs.jpg' %}">
+            <h3>Web Scraping</h3>
+            <p>We are also good at scraping websites. Yo!. <br>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

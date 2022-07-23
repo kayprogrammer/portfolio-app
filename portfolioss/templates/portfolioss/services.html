@@ -1,0 +1,59 @@
+{% extends 'portfolioss/index.html' %}
+{% load static %}
+
+{% block content %}
+<section id="newsletter">
+    <div class="container">
+        <h1>Suscribe to Our Newsletter</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.email}}
+            <button style="cursor: pointer;" type="submit" class="button_1">Suscribe</button>
+            <div style="color: orange; font-size: 13px;">{{form.email.errors|striptags}}</div>
+
+        </form>
+
+    </div>
+</section>
+<section id="main">
+    <div class="container">
+        <article id="main-col">
+            <h1 class="page-title">Services</h1>
+            <ul id="services">
+                <li>
+                    <h3>Web Development</h3>
+                    <p>I just like big numbers, you can ignore them. <br>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p>
+                    <p>Pricing: $1,000 - $3000</p>
+                </li>
+                <li>
+                    <h3>Web Maintenance</h3>
+                    <p>et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est.</p>
+                    <p>Pricing: $250 per month</p>
+                </li>
+                <li>
+                    <h3>Web Hosting</h3>
+                    <p>laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi. </p>
+                    <p>Pricing: $125 per month</p>
+                </li>
+            </ul>
+        </article>
+
+        <aside id="sidebar" style="margin-top: 50px;">
+            <div class="dark">
+                <h3>Get a Quote</h3>
+                <form class="quote" method="post">
+                    {% csrf_token %}
+
+                    {{form2.name}}
+                    <div style="color: orange; font-size: 13px;">{{form2.name.errors|striptags}}</div>
+                    {{form2.email}}
+                    <div style="color: orange; font-size: 13px;">{{form2.email.errors|striptags}}</div>
+                    {{form2.text}}
+                    <button style="cursor: pointer;" class="button_1" type="submit">Send</button>
+                </form>
+            </div>
+
+        </aside>
+    </div>
+</section>
+{% endblock %}
